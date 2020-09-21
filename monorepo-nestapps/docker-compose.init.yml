@@ -1,0 +1,9 @@
+# This file triggers the initial build
+version: "3.8"
+
+services:
+  pkg_builder:
+    image: pkg-builder
+    build:
+      context: .
+      dockerfile: Dockerfile.init

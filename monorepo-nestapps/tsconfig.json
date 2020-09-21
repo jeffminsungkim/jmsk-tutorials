@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "lib": ["ES7"],
+    "declaration": true,
+    "removeComments": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": false,
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "strict": false,
+    "noUnusedLocals": false,
+    "noImplicitReturns": true,
+    "esModuleInterop": true
+  },
+  "exclude": ["node_modules", "dist", "**/*.spec.ts"]
+}

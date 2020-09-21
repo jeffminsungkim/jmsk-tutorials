@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  pkg_builder:
+    image: pkg-builder
+    build: .
+  mariadb:
+    image: mariadb:10.3
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=tutorial
+    restart: always
+  foo:
+    container_name: foo
+    build: ./packages/foo
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mariadb
+    restart: always
+  bar:
+    container_name: bar
+    build: ./packages/bar
+    ports:
+      - "8002:8002"
+    restart: always
+
+

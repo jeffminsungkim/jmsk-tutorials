@@ -1,0 +1,25 @@
+{
+  "name": "@jmsk-tutorials/bar",
+  "version": "0.0.0",
+  "description": "A sample Nest application for testing monorepo's for microservices architecture",
+  "author": "Minsung Kim <jeffminsungkim@gmail.com>",
+  "license": "ISC",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "nest build",
+    "build:addon": "node-gyp configure && node-gyp build",
+    "start:dev": "nest start --watch",
+    "lint": "eslint --ext .ts ./src/",
+    "test": "jest",
+    "test:cov": "jest --coverage"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeffminsungkim/jmsk-tutorials/monorepo-nestapps"
+  }
+}
