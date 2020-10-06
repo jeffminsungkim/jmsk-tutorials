@@ -9,13 +9,9 @@ RUN echo $(ls -1 /app/current)
 
 WORKDIR /app/current/packages/bar
 
-COPY package.json tsconfig*.json ./
+COPY . .
 
 RUN yarn build
-
-COPY dist ./dist
-
-RUN echo $(ls -1 /app/current/packages/bar)
 
 EXPOSE 8002
 

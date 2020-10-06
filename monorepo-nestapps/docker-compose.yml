@@ -21,11 +21,11 @@ services:
     depends_on:
       - mariadb
     restart: always
-  bar:
-    container_name: bar
-    build: ./packages/bar
-    ports:
-      - "8002:8002"
-    restart: always
+  # bar:
+  #   container_name: bar
+  #   build: ./packages/bar
+  #   ports:
+  #     - "8002:8002"
+  #   restart: always
 
 

@@ -1,2 +1,4 @@
 FROM scratch
 COPY package.json lerna.json yarn.lock tsconfig.json /build/
+COPY ./packages/foo/package.json /build/packages/foo/package.json
+COPY ./packages/bar/package.json /build/packages/bar/package.json
