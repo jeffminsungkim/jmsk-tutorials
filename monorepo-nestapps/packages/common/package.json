@@ -8,7 +8,10 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "prebuild": "rimraf lib",
-    "build": "tsc -p tsconfig.build.json"
+    "build": "tsc -p tsconfig.build.json",
+    "postbuild": "mv ./lib/src/* ./lib && rmdir lib/src",
+    "test": "jest",
+    "test:cov": "jest --coverage"
   },
   "dependencies": {},
   "peerDependencies": {},
